@@ -1306,8 +1306,7 @@ class SynopsysToolsParameter {
         let command = '';
         let coverityStreamName = inputs.COVERITY_STREAM_NAME;
         if ((0, validators_1.isNullOrEmptyValue)(coverityStreamName)) {
-            // const defaultStreamName = (process.env[application_constants_1.GITHUB_ENVIRONMENT_VARIABLES.GITHUB_EVENT_NAME] === 'pull_request' ? process.env[application_constants_1.GITHUB_ENVIRONMENT_VARIABLES.GITHUB_BASE_REF] : process.env[application_constants_1.GITHUB_ENVIRONMENT_VARIABLES.GITHUB_REF_NAME]) || '';
-            const defaultStreamName = '';
+            const defaultStreamName = (process.env[application_constants_1.GITHUB_ENVIRONMENT_VARIABLES.GITHUB_EVENT_NAME] === 'pull_request' ? process.env[application_constants_1.GITHUB_ENVIRONMENT_VARIABLES.GITHUB_BASE_REF] : process.env[application_constants_1.GITHUB_ENVIRONMENT_VARIABLES.GITHUB_REF_NAME]) || '';
 	    coverityStreamName = githubRepoName.concat('-').concat(defaultStreamName);
         }
         let coverityProjectName = inputs.COVERITY_PROJECT_NAME;
