@@ -7,7 +7,7 @@ import * as inputs from './synopsys-action/inputs'
 import {uploadDiagnostics} from './synopsys-action/diagnostics'
 
 export async function run() {
-  info('Synopsys Action started...')
+  info('Synopsys Action started...SRC')
   const tempDir = await createTempDir()
   let formattedCommand = ''
 
