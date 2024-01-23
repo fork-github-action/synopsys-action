@@ -116,7 +116,8 @@ export class SynopsysToolsParameter {
     let coverityStreamName = inputs.COVERITY_STREAM_NAME
 
     if (isNullOrEmptyValue(coverityStreamName)) {
-      const defaultStreamName = (process.env[GITHUB_ENVIRONMENT_VARIABLES.GITHUB_EVENT_NAME] === 'pull_request' ? process.env[GITHUB_ENVIRONMENT_VARIABLES.GITHUB_BASE_REF] : process.env[GITHUB_ENVIRONMENT_VARIABLES.GITHUB_REF_NAME]) || ''
+      // const defaultStreamName = (process.env[GITHUB_ENVIRONMENT_VARIABLES.GITHUB_EVENT_NAME] === 'pull_request' ? process.env[GITHUB_ENVIRONMENT_VARIABLES.GITHUB_BASE_REF] : process.env[GITHUB_ENVIRONMENT_VARIABLES.GITHUB_REF_NAME]) || ''
+      const defaultStreamName = ''
       coverityStreamName = githubRepoName.concat('-').concat(defaultStreamName)
     }
 
